@@ -1,0 +1,7 @@
+# Arquivos de cache e importação do Godot
+.godot/
+.import/
+export_presets.cfg
+
+# Arquivos temporários do sistema
+*.tmp
