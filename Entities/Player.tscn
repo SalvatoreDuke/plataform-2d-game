@@ -1,13 +1,12 @@
 [gd_scene format=3 uid="uid://b8bmmeckuv57h"]
 
 [ext_resource type="Script" uid="uid://byy2ulg81o3kq" path="res://scripts/Player.gd" id="1_41wu2"]
-[ext_resource type="Texture2D" uid="uid://cyt2vmx0a6inh" path="res://Sprites/Sprite Pack 6/3 - Skeleton/Standing_Idle (32 x 32).png" id="2_1iada"]
-[ext_resource type="Texture2D" uid="uid://cyl7idya27vkj" path="res://Sprites/Sprite Pack 6/3 - Skeleton/Limping_Movement (32 x 32).png" id="3_0gd87"]
-[ext_resource type="Texture2D" uid="uid://c3mfe6whct14y" path="res://Sprites/Sprite Pack 6/3 - Skeleton/Jumping (32 x 32).png" id="3_c7jvw"]
+[ext_resource type="Texture2D" uid="uid://cyt2vmx0a6inh" path="res://Sprites/Character sprites/3 - Skeleton/Standing_Idle (32 x 32).png" id="2_1iada"]
+[ext_resource type="Texture2D" uid="uid://cyl7idya27vkj" path="res://Sprites/Character sprites/3 - Skeleton/Limping_Movement (32 x 32).png" id="3_0gd87"]
+[ext_resource type="Texture2D" uid="uid://c3mfe6whct14y" path="res://Sprites/Character sprites/3 - Skeleton/Jumping (32 x 32).png" id="3_c7jvw"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1eu2o"]
 radius = 7.0
-height = 18.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0gd87"]
 atlas = ExtResource("2_1iada")
@@ -146,6 +145,7 @@ script = ExtResource("1_41wu2")
 shape = SubResource("CapsuleShape2D_1eu2o")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=460845930]
+z_index = 1
 sprite_frames = SubResource("SpriteFrames_1eu2o")
 animation = &"Jump"
 autoplay = "Idle"
@@ -153,4 +153,4 @@ autoplay = "Idle"
 [node name="Camera2D" type="Camera2D" parent="." unique_id=963147772]
 limit_left = 0
 limit_top = 0
-limit_bottom = 200
+limit_bottom = 500
