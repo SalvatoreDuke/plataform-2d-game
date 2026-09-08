@@ -22,6 +22,8 @@ tile_set = ExtResource("2_uq144")
 
 [node name="6" type="ParallaxLayer" parent="ParallaxBackground" unique_id=1352774983]
 z_index = -4
+texture_repeat = 2
+position = Vector2(-1, 0)
 motion_scale = Vector2(0.1, 0.1)
 motion_mirroring = Vector2(288, 0)
 
@@ -30,8 +32,11 @@ position = Vector2(0, -11)
 scale = Vector2(1.7256944, 1.3509616)
 texture = ExtResource("3_uq144")
 centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 576, 208)
 
 [node name="5" type="ParallaxLayer" parent="ParallaxBackground" unique_id=1623090]
+texture_repeat = 2
 motion_scale = Vector2(0.16, 0.16)
 motion_mirroring = Vector2(288, 0)
 
@@ -40,8 +45,11 @@ position = Vector2(1, -16)
 scale = Vector2(1.7256944, 1.3509616)
 texture = ExtResource("4_mvm06")
 centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 576, 208)
 
 [node name="4" type="ParallaxLayer" parent="ParallaxBackground" unique_id=1045044392]
+texture_repeat = 2
 motion_scale = Vector2(0.2, 0.2)
 motion_mirroring = Vector2(288, 0)
 
@@ -50,8 +58,11 @@ position = Vector2(1, -16)
 scale = Vector2(1.7256944, 1.3509616)
 texture = ExtResource("5_dvh0n")
 centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 576, 208)
 
 [node name="3" type="ParallaxLayer" parent="ParallaxBackground" unique_id=1332562162]
+texture_repeat = 2
 motion_scale = Vector2(0.3, 0.3)
 motion_mirroring = Vector2(288, 0)
 
@@ -60,9 +71,12 @@ position = Vector2(1, -16)
 scale = Vector2(1.7256944, 1.3509616)
 texture = ExtResource("6_d8dn4")
 centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 576, 208)
 
 [node name="2" type="ParallaxLayer" parent="ParallaxBackground" unique_id=748776402]
 z_index = -4
+texture_repeat = 2
 motion_scale = Vector2(0.3, 0.3)
 motion_mirroring = Vector2(288, 0)
 
@@ -71,3 +85,5 @@ position = Vector2(1, -16)
 scale = Vector2(1.7256944, 1.3509616)
 texture = ExtResource("7_5rndp")
 centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 576, 208)
