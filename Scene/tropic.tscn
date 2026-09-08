@@ -1,8 +1,8 @@
 [gd_scene format=4 uid="uid://w4xa4p1gbf6h"]
 
 [ext_resource type="PackedScene" uid="uid://b8bmmeckuv57h" path="res://Entities/Player.tscn" id="1_fi8mx"]
-[ext_resource type="TileSet" uid="uid://yc0ethqf371p" path="res://Terrain.tres" id="2_wyn3p"]
-[ext_resource type="TileSet" uid="uid://neyr33h8vwbh" path="res://decoration.tres" id="3_wyn3p"]
+[ext_resource type="TileSet" uid="uid://yc0ethqf371p" path="res://Tile presets/Terrain.tres" id="2_wyn3p"]
+[ext_resource type="TileSet" uid="uid://neyr33h8vwbh" path="res://Tile presets/decoration.tres" id="3_wyn3p"]
 
 [node name="Tropic" type="Node2D" unique_id=1911886761]
 
