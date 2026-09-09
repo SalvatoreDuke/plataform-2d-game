@@ -3,6 +3,9 @@
 [ext_resource type="Texture2D" uid="uid://bjelqr3a7uxl" path="res://Sprites/Tilesets/1 - Grassland/Terrain (16 x 16).png" id="1_pxb68"]
 [ext_resource type="Texture2D" uid="uid://d3o787swe0pt6" path="res://Sprites/Tilesets/3 - Tropics/Terrain (16 x 16).png" id="2_83eg8"]
 
+[sub_resource type="TileMapPattern" id="TileMapPattern_yi7yo"]
+tile_data = PackedInt32Array(196608, 983040, 3, 131074, 983040, 3, 65540, 983040, 3, 6, 589824, 3, 7, 655360, 3, 8, 851968, 3)
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4jv7b"]
 texture = ExtResource("1_pxb68")
 3:1/0 = 0
@@ -34,11 +37,14 @@ texture = ExtResource("1_pxb68")
 7:3/0 = 0
 7:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 9:3/0 = 0
+9:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, -4.4964676, -8, -4.6763268)
 10:3/0 = 0
+10:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, -4.4964676, -8, -4.6763268)
 11:3/0 = 0
 12:3/0 = 0
 13:3/0 = 0
 15:3/0 = 0
+15:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:4/0 = 0
 1:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 2:4/0 = 0
@@ -139,3 +145,4 @@ texture = ExtResource("2_83eg8")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_4jv7b")
 sources/1 = SubResource("TileSetAtlasSource_u1tu0")
+pattern_0 = SubResource("TileMapPattern_yi7yo")

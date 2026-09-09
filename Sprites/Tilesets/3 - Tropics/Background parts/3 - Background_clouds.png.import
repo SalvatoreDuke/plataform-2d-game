@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://br88t0a5hemib"
-path="res://.godot/imported/4 - Background_clouds.png-936be65893d6bc87691c364f0e0b0543.ctex"
+path="res://.godot/imported/3 - Background_clouds.png-cf4049b3b3c549981b1f3a2c9472eb44.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Tilesets/3 - Tropics/Background parts/4 - Background_clouds.png"
-dest_files=["res://.godot/imported/4 - Background_clouds.png-936be65893d6bc87691c364f0e0b0543.ctex"]
+source_file="res://Sprites/Tilesets/3 - Tropics/Background parts/3 - Background_clouds.png"
+dest_files=["res://.godot/imported/3 - Background_clouds.png-cf4049b3b3c549981b1f3a2c9472eb44.ctex"]
 
 [params]
 
