@@ -7,15 +7,18 @@ enum Playerstate {
 	idle,
 	walk,
 	jump,
+	fall,
 	duck
 }
 
+#variaveis globais
 const SPEED = 100.0
 const JUMP_VELOCITY = -300.0
 var status: Playerstate
 var direction = 0
-
-
+var jump_count = 0
+@export var max_jump_count = 2
+#funções de estado global
 func _ready() -> void:
 	go_to_idle_state()
 func _physics_process(delta: float) -> void:
@@ -31,9 +34,9 @@ func _physics_process(delta: float) -> void:
 			jump_state()
 		Playerstate.duck:
 			duck_state()
+		Playerstate.fall:
+			fall_state()
 	move_and_slide()
-
-
 
 
 #estados do boneco
@@ -46,13 +49,17 @@ func go_to_walk_state():
 func go_to_jump_state():
 	status = Playerstate.jump
 	animated.play("jump")
+	velocity.y = JUMP_VELOCITY
+	jump_count += 1
 func go_to_duck_state():
 	status = Playerstate.duck
 	animated.play("duck")
 	collision_shape.shape.radius = 4
 	collision_shape.shape.height = 12
 	collision_shape.position.y = 7
-
+func go_to_fall_state():
+	status = Playerstate.fall
+	animated.play("fall")
 
 #maquina de estados do boneco
 func idle_state():
@@ -75,12 +82,21 @@ func walk_state():
 		return
 	if Input.is_action_just_pressed("jump"):
 		go_to_jump_state()
+	if !is_on_floor():
+		jump_count += 1 #caso eu queira remover, isso desconta o "pulo duplo pós queda"
+		go_to_fall_state() 
 	jump()
 func jump_state():
 	move()
-	if is_on_floor():
-		go_to_idle_state()
+	
+	if Input.is_action_just_pressed("jump") && can_jump():
+		go_to_jump_state()
 		return
+		
+	if velocity.y > 0:
+		go_to_fall_state()
+		return
+	
 	jump()
 func duck_state():
 	update_direction()
@@ -88,7 +104,16 @@ func duck_state():
 		exit_from_duck_state()
 		go_to_idle_state()
 		return
+func fall_state():
+	move()
+	
+	if Input.is_action_just_pressed("jump") && can_jump():
+		go_to_jump_state()
 
+	if is_on_floor():
+		jump_count = 0
+		go_to_idle_state()
+		return
 
 #movimentação do boneco
 func move():
@@ -112,3 +137,6 @@ func exit_from_duck_state():
 	collision_shape.shape.radius = 4
 	collision_shape.shape.height = 24
 	collision_shape.position.y = 1
+func can_jump() -> bool:
+	return jump_count < max_jump_count
+	

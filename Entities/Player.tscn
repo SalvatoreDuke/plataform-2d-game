@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://do3r183pfy6fd" path="res://Sprites/sample(idle&walk)/walk/sprite sheets/from idle.png" id="4_2a4id"]
 [ext_resource type="Texture2D" uid="uid://c636xvsdppn47" path="res://Sprites/sample(idle&walk)/walk/sprite sheets/walk.png" id="4_c7jvw"]
 [ext_resource type="Texture2D" uid="uid://cagk8kswn1kom" path="res://Sprites/Character sprites/1 - Penguin/Jump (16 x 16).png" id="4_io258"]
+[ext_resource type="Texture2D" uid="uid://by2rt15nvfgep" path="res://Sprites/Character sprites/1 - Penguin/Falling (16 x 16).png" id="4_w6hej"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1eu2o"]
 radius = 3.0
@@ -202,6 +203,14 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("4_w6hej")
+}],
+"loop": 1,
+"name": &"fall",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": ExtResource("4_io258")
 }],
 "loop": 1,
@@ -311,5 +320,5 @@ z_index = 1
 position = Vector2(-2, 0)
 scale = Vector2(0.4347826, 0.44545454)
 sprite_frames = SubResource("SpriteFrames_1eu2o")
-animation = &"Idle"
+animation = &"fall"
 flip_h = true
