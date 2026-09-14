@@ -8,7 +8,7 @@ enum Playerstate {
 }
 
 const SPEED = 100.0
-const JUMP_VELOCITY = -400.0
+const JUMP_VELOCITY = -300.0
 var status: Playerstate
 
 func _ready() -> void:
@@ -78,9 +78,9 @@ func move():
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 	if direction > 0:
-			animated.flip_h = false
-	elif direction < 0:
 			animated.flip_h = true
+	elif direction < 0:
+			animated.flip_h = false
 func jump():
 	var direction := Input.get_axis("left", "right")
 	if Input.is_action_just_pressed("jump") and is_on_floor():
