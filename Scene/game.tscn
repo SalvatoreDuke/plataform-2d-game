@@ -10,7 +10,7 @@
 [node name="Camera" parent="." unique_id=1862418531 instance=ExtResource("1_03iqk")]
 
 [node name="Player" parent="." unique_id=1341999667 instance=ExtResource("1_mhtsl")]
-position = Vector2(32, 161)
+position = Vector2(35, 165)
 
 [node name="Tiles" type="Node2D" parent="." unique_id=1492657186]
 

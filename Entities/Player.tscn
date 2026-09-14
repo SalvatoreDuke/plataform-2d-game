@@ -2,12 +2,14 @@
 
 [ext_resource type="Script" uid="uid://byy2ulg81o3kq" path="res://scripts/Player.gd" id="1_41wu2"]
 [ext_resource type="Texture2D" uid="uid://bg0sskntkl35m" path="res://Sprites/sample(idle&walk)/idle/sprite sheets/idle.png" id="2_c7jvw"]
-[ext_resource type="Texture2D" uid="uid://c3mfe6whct14y" path="res://Sprites/Character sprites/3 - Skeleton/Jumping (32 x 32).png" id="3_c7jvw"]
+[ext_resource type="Texture2D" uid="uid://dhh1yhbobqpfl" path="res://Sprites/Character sprites/1 - Penguin/Ducking (16 x 16).png" id="3_drum4"]
+[ext_resource type="Texture2D" uid="uid://do3r183pfy6fd" path="res://Sprites/sample(idle&walk)/walk/sprite sheets/from idle.png" id="4_2a4id"]
 [ext_resource type="Texture2D" uid="uid://c636xvsdppn47" path="res://Sprites/sample(idle&walk)/walk/sprite sheets/walk.png" id="4_c7jvw"]
+[ext_resource type="Texture2D" uid="uid://cagk8kswn1kom" path="res://Sprites/Character sprites/1 - Penguin/Jump (16 x 16).png" id="4_io258"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1eu2o"]
-radius = 7.0
-height = 28.0
+radius = 3.0
+height = 24.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2a4id"]
 atlas = ExtResource("2_c7jvw")
@@ -49,9 +51,13 @@ region = Rect2(368, 0, 46, 55)
 atlas = ExtResource("2_c7jvw")
 region = Rect2(414, 0, 46, 55)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_opvli"]
-atlas = ExtResource("3_c7jvw")
-region = Rect2(0, 0, 32, 32)
+[sub_resource type="AtlasTexture" id="AtlasTexture_g6xui"]
+atlas = ExtResource("4_2a4id")
+region = Rect2(0, 0, 45, 58)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ddrxi"]
+atlas = ExtResource("4_2a4id")
+region = Rect2(45, 0, 45, 58)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_c7jvw"]
 atlas = ExtResource("4_c7jvw")
@@ -188,11 +194,30 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_opvli")
+"texture": ExtResource("3_drum4")
 }],
 "loop": 1,
-"name": &"Jump",
+"name": &"duck",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_io258")
+}],
+"loop": 1,
+"name": &"jump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g6xui")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ddrxi")
+}],
+"loop": 1,
+"name": &"start",
+"speed": 2.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -278,11 +303,13 @@ collision_mask = 9
 script = ExtResource("1_41wu2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=175418202]
+z_index = 2
 shape = SubResource("CapsuleShape2D_1eu2o")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=460845930]
 z_index = 1
-scale = Vector2(0.5, 0.5)
+position = Vector2(-2, 0)
+scale = Vector2(0.4347826, 0.44545454)
 sprite_frames = SubResource("SpriteFrames_1eu2o")
-animation = &"walk"
-autoplay = "Idle"
+animation = &"Idle"
+flip_h = true

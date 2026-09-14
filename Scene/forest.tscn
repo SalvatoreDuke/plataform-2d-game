@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://b27fflf3vu1ok" path="res://Sprites/Tilesets/2 - Autumn Forest/Background parts/3 - Bottom_leaf_piles.png" id="7_uehro"]
 [ext_resource type="Texture2D" uid="uid://cwicr2ex0bxk3" path="res://Sprites/Tilesets/2 - Autumn Forest/Background parts/2 - Trees.png" id="8_u6jjf"]
 [ext_resource type="Texture2D" uid="uid://buyu701me63fx" path="res://Sprites/Tilesets/2 - Autumn Forest/Background parts/1 - Leaf_top.png" id="9_p1i8u"]
+[ext_resource type="TileSet" uid="uid://neyr33h8vwbh" path="res://Tile presets/decoration.tres" id="11_2dvii"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p1i8u"]
 size = Vector2(20, 145)
@@ -27,13 +28,14 @@ position = Vector2(0, -62.5)
 shape = SubResource("RectangleShape2D_p1i8u")
 
 [node name="Camera" parent="." unique_id=1862418531 instance=ExtResource("1_ffbcr")]
+position = Vector2(0, 142)
 limit_left = 5
 limit_right = 624
 limit_bottom = 270
 
 [node name="Player" parent="." unique_id=1341999667 instance=ExtResource("1_stcry")]
 z_index = 10
-position = Vector2(42, 205)
+position = Vector2(31, 228)
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="." unique_id=1265702819]
 
@@ -126,5 +128,7 @@ tile_map_data = PackedByteArray("AAAAAA8AAgADAAEAAAAAABAAAgADAAIAAAABAA8AAgAEAAE
 tile_set = ExtResource("2_uq144")
 
 [node name="decoration" type="TileMapLayer" parent="Tile" unique_id=467446289]
+tile_map_data = PackedByteArray("AAAAAA4AAQABAAAAAAABAA4AAQABAAAAAAACAA4AAQABAAAAAAADAA4AAQABAAAAAAAHAA4AAQACAAAAAAAIAA4AAQACAAAAAAAJAA4AAQACAAAAAAAKAA4AAQACAAAAAAALAA4AAQACAAAAAAANAA4AAwAFAAMAAAAOAA4AAwAGAAMAAAAPAA4AAwAHAAMAAAAXAA4ABQADAAEAABATAA4ABQADAAEAAAAZAA4ABQAGAAIAAAAMAA4AAQACAAAAAAARAA4AAAABAAUAAAAVAA4AAAABAAUAAAAaAA4AAAABAAUAAAA=")
+tile_set = ExtResource("11_2dvii")
 
 [editable path="LevelEnd"]
