@@ -36,6 +36,8 @@ limit_bottom = 270
 [node name="Player" parent="." unique_id=1341999667 instance=ExtResource("1_stcry")]
 z_index = 10
 position = Vector2(31, 228)
+acceleration = 200
+deceleration = 300
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="." unique_id=1265702819]
 
